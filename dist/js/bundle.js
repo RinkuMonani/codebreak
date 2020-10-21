@@ -1,17 +1,1 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is not neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
-/******/ (() => { // webpackBootstrap
-/*!*************************!*\
-  !*** ./src/js/index.js ***!
-  \*************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements:  */
-eval("console.log(\"js\");\n\n//# sourceURL=webpack://code-breaker/./src/js/index.js?");
-/******/ })()
-;
+(()=>{console.log("js");const e={themeImage:document.querySelector(".theme-image"),mainPageContent:document.querySelector(".content-cover"),navigationMenu:document.querySelector(".navigation-menu"),header:document.querySelector(".header")},t=(e,t=0)=>{e.style.marginRight=t};console.log("init"),((e,t=0)=>{e.style.marginLeft=t})(e.themeImage),t(e.mainPageContent),e.navigationMenu.style.opacity="1",t(e.header)})();
