@@ -24,7 +24,8 @@ const displayThemeImage = el => {
 }
 
 const displayMainPageContent = () => {
-    slideFromRight(elements.mainPageContent);
+    // slideFromRight(elements.mainPageContent);
+    appear(elements.mainPageContent);
     appear(elements.navigationMenu);
     slideFromRight(elements.header);
 }
