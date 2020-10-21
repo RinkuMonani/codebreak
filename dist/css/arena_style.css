@@ -17,13 +17,13 @@ html, body{
     margin:0; padding:0;
     list-style-type: none;
     margin-top: 10px;
-    margin-right:40px;
+    margin-left:40px;
     float:right;
     color:white;
     font-size:0.8em;
     
     position: fixed;
-    right:0;
+    left:0;
     top:40px;
 
     z-index: 1;
@@ -48,50 +48,58 @@ html, body{
 .container{
     height:inherit;   
 }
+
 .theme-image{
     overflow-x: hidden;
     transition: 1s;
-    margin-left:-100%;
-    background-image: url("../img/sheldon3.jpg");
+    margin-right:-100%;
+    background-image: url("../img/sheldon2.JPG");
     background-repeat: no-repeat;
-    background-position: top left;
+    background-position: top right;
     background-size: cover;
+
     width:100%;
     height:100%;
+    
 }
 .theme-image img{
     height:100vh;
-
 }
 
 .content-cover{
     height:100vh;
     /* margin-right:-100%; */
     width:100%;
-    background-image:linear-gradient(to left, rgb(0,0,0)20% , rgb(0,0,0)20%, rgb(0,0,0,0.5));
+    background-image:linear-gradient(to right, rgb(0,0,0)20% , rgb(0,0,0)20%, rgb(0,0,0,0.5));
     color:black;
     transition: 1s;
     transition-delay: 0.7s;
     position: absolute;
-    top:0; right:0;
+    top:0; left:0;
 
     opacity: 0;
 }
 
-.content{
+.content, .game-arena{
     /* border:2px solid green; */
     position: absolute;
     top:20%;
-    right:0;
+    left:5%;
     width:50%;
+    height:75%;
+    overflow-y: scroll;
 }
+
+/* .game-arena{
+    border:2px solid yellow;
+} */
 .header, .start-button, .instructions{
     color:white;
     /* border:2px solid white; */
     margin-bottom: 12px;
 }
 .header{
-    font-size:43px;
+    font-size:32px;
     font-weight: bold;
 }
 .header p{
@@ -101,12 +109,12 @@ html, body{
 .instructions{
     padding: 0; margin-bottom: 30px;
     list-style-type: none;
-    font-size:20px;
+    font-size:18px;
 } .instructions li{
     padding:8px;
 }
 
-.start-button{
+.start-button, .reset-button, .submit-button{
     /* padding:12px; */
     padding:12px 30px;
     margin-top: 100px;
@@ -115,8 +123,8 @@ html, body{
     background-image: linear-gradient(to right bottom, rgb(170, 30, 30), rgb(182, 31, 31));
     /* background-image: linear-gradient(to right bottom, rgb(9, 68, 9), rgb(4, 65, 4)); */
     border-radius: 5px;
-    font-size:16px;
-
+    font-size:12px;
+    cursor: pointer;
     /* border:2px solid red; */
 }
 
@@ -125,32 +133,74 @@ html, body{
     margin-top:20px;
 }
     .share-game a{
-        padding:7px;
-        font-size: 16px;
+        padding:3px 5px 5px 5px;
+        font-size: 12px;
     }
 
     .share-whatsapp{
         background-color: green;
         border-radius: 4px;
-        width:100px;
+        width:72px;
         vertical-align: top;
     }
 
-@media screen and (max-width:600px){
+.status-bar{
+    /* border:2px solid yellow; */
+    color:white;   
+    margin:0; padding:0; 
+    margin-bottom:20px;
+}
+.status-bar li{
+    display: inline-block;
+    margin-right:10px;
+    padding:8px;
+    background-image: linear-gradient(to right bottom, rgb(170, 30, 30), rgb(182, 31, 31));
+}
+.hide{
+    /* display: none; */
+    opacity: 0;
+    width:0;
+}
+.display{
+    opacity: 1;
+    /* z-index: 1; */
+    /* width:100%; */
+}
+
+.game-input-form-list{
+    border:5px solid red;
+    margin:0; padding:0;
+}
+.game-input-form-list li{
+    display: inline-block;
+    margin-right:10px;
+}
+.game-input-form-list input{
+    width:1.5em;
+    height:1.5em;
+    border-radius: 5px;
+    font-size:36px;
+    text-align: center;
+}
+@media screen and (max-width:800px){
     /* .theme-image{
         margin-left:-20px;
     } */
     .theme-image img{
         height:100vh;
     }
-    .content{
+    .content, .game-arena{
         width:95%;
+        overflow-y: scroll;
+
     }
 
     .navigation-menu{
-        margin-right:10px;
+        /* top:10px; */
+        margin-left:10px;
         font-size:1em;
     }
+
     .header{
         font-size:28px;
     }
@@ -169,3 +219,22 @@ html, body{
     }
 
 }
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+    background: gray;
+    border-radius: 5px;
+    }
+
+
+    ::-webkit-scrollbar-thumb:hover {
+    background: rgb(140, 131, 131);
+    }

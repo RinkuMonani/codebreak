@@ -3,20 +3,29 @@ const path = require('path')
 const { Template } = require("webpack")
 
 module.exports = {
-    entry: [
-        './src/js/index.js'
-    ],
+    entry: {
+        index:'./src/js/index.js',
+        arena:'./src/js/arena.js'  
+    },
 
     output: {
-        filename: 'js/bundle.js',
+        filename: 'js/[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
 
     plugins: [
         new HtmlWebpackPlugin({
+            hash:true,
             filename: 'index.html',
-            template: './src/index.html'
-        })
+            template: './src/index.html',
+            chunks: ['index']
+        }),
+        new HtmlWebpackPlugin({
+            hash:true,
+            filename: 'arena.html',
+            template: './src/arena.html',
+            chunks: ['arena']
+        }),
     ],
 
     devServer:{

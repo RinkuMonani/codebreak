@@ -1,2 +1,2 @@
 (()=>{console.log("js");const e={themeImage:document.querySelector(".theme-image"),mainPageContent:document.querySelector(".content-cover"),navigationMenu:document.querySelector(".navigation-menu"),header:document.querySelector(".header")},t=e=>{e.style.opacity="1"};console.log("init"),((e,t=0)=>{e.style.marginLeft=t})(e.themeImage),t(e.mainPageContent),t(e.navigationMenu),((e,t=0)=>{e.style.marginRight=t})(e.header)})();
-//# sourceMappingURL=bundle.js.map
+//# sourceMappingURL=index.bundle.js.map
