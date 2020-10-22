@@ -41,6 +41,7 @@ html, body{
 }
     .navigation-menu a:hover{
         border-bottom: 2px solid red;
+
     }
     .navigation-menu a{
         padding:12px;
@@ -53,7 +54,7 @@ html, body{
     overflow-x: hidden;
     transition: 1s;
     margin-right:-100%;
-    background-image: url("../img/sheldon2.JPG");
+    background-image: url("../img/sheldon2.jpg");
     background-repeat: no-repeat;
     background-position: top right;
     background-size: cover;
@@ -88,14 +89,26 @@ html, body{
     width:50%;
     height:75%;
     overflow-y: scroll;
+    /* transform: translateY(-50%); */
 }
 
 /* .game-arena{
     border:2px solid yellow;
 } */
+.button{
+    color:white; 
+    padding:12px 30px;
+    margin-top: 100px;
+    text-decoration: none;
+    color:white;
+    background-image: linear-gradient(to right bottom, rgb(170, 30, 30), rgb(182, 31, 31));
+    /* background-image: linear-gradient(to right bottom, rgb(9, 68, 9), rgb(4, 65, 4)); */
+    border-radius: 5px;
+    font-size:12px;
+    cursor: pointer;
+}
 .header, .start-button, .instructions{
     color:white;
-    /* border:2px solid white; */
     margin-bottom: 12px;
 }
 .header{
@@ -113,20 +126,17 @@ html, body{
 } .instructions li{
     padding:8px;
 }
-
+/* 
 .start-button, .reset-button, .submit-button{
-    /* padding:12px; */
     padding:12px 30px;
     margin-top: 100px;
     text-decoration: none;
     color:white;
     background-image: linear-gradient(to right bottom, rgb(170, 30, 30), rgb(182, 31, 31));
-    /* background-image: linear-gradient(to right bottom, rgb(9, 68, 9), rgb(4, 65, 4)); */
     border-radius: 5px;
     font-size:12px;
     cursor: pointer;
-    /* border:2px solid red; */
-}
+}*/
 
 .share-game{
     /* border:2px solid red; */
@@ -143,6 +153,9 @@ html, body{
         width:72px;
         vertical-align: top;
     }
+    .share-whatsapp:hover{
+        background-color: rgb(7, 97, 7);
+    }
 
 .status-bar{
     /* border:2px solid yellow; */
@@ -156,22 +169,12 @@ html, body{
     padding:8px;
     background-image: linear-gradient(to right bottom, rgb(170, 30, 30), rgb(182, 31, 31));
 }
-.hide{
-    /* display: none; */
-    opacity: 0;
-    width:0;
-}
-.display{
-    opacity: 1;
-    /* z-index: 1; */
-    /* width:100%; */
-}
 
-.game-input-form-list{
-    border:5px solid red;
+.game-input-form-list, .game-hints-list, .demo{
+    /* border:5px solid red; */
     margin:0; padding:0;
 }
-.game-input-form-list li{
+.game-input-form-list li, .game-hints-list li{
     display: inline-block;
     margin-right:10px;
 }
@@ -181,6 +184,40 @@ html, body{
     border-radius: 5px;
     font-size:36px;
     text-align: center;
+}
+
+/* .back-button{
+    position: fixed;
+    bottom:0;
+    left:0;
+} */
+.correct-ans li{
+    /* border: 2px solid red; */
+    color:white;
+    padding:16px 20px 5px 20px;
+    text-align: center;
+    font-size:36px;
+    font-weight: bold;
+    border-bottom: 2px solid green;
+}
+.correct{
+    border:3px solid green;
+    box-shadow: 1px 2px 2px green;
+}
+
+.incorrect{
+    border:3px solid red;
+    box-shadow: 1px 2px 2px red;
+}
+
+.partially-correct{
+    border:3px solid orange;
+    box-shadow: 1px 2px 2px orange;
+}
+.game-arena .back-button{
+    position: fixed;
+    left:10px;
+    bottom:10px;
 }
 @media screen and (max-width:800px){
     /* .theme-image{
@@ -192,6 +229,7 @@ html, body{
     .content, .game-arena{
         width:95%;
         overflow-y: scroll;
+        /* top:50%; */
 
     }
 
@@ -208,15 +246,21 @@ html, body{
         font-size:14px;
     }
 
-    .start-button{
+    .start-button, .back-button{
         font-size:14px;
         padding:10px;
     }
 
+    /* .share-game{
+        position: fixed;
+        bottom:10px;
+        right:10px;
+    } */
     .share-game a{
         padding:5px; font-size:12px;
         width:75px;
     }
+   
 
 }
 
@@ -238,3 +282,28 @@ html, body{
     ::-webkit-scrollbar-thumb:hover {
     background: rgb(140, 131, 131);
     }
+
+    .hide{
+        opacity: 0;
+        /* border:2px solid green; */
+        width:0;
+    }
+    .display{
+        opacity: 1;
+    }
+    
+
+.demo li{
+    display: block;
+}
+.demo input{
+    height: 0.8em;
+    width:0.8em;
+    border-radius: 5px;
+    font-size:36px;
+}
+
+/* .demo{
+    border: 2px solid red;
+    
+} */

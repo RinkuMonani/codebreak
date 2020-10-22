@@ -21,51 +21,69 @@
             <!-- <img src="./img/sheldon1.jpg" style="height:100vh"> -->
         </div>
         <div class="content-cover">
+           
             <div class="content">
-                <!-- <div class="share-game">
+                 <div class="share-game">
                     <a class="fab fa-whatsapp share-whatsapp" href="whatsapp://send?text=Hey! I played this amazing game 'Code Break'. Check it out you might like it! https://rinkumonani.github.io/codebreak/dist/index.html " data-action="share/whatsapp/share" target="_blank"> Whatsapp</a>    
                     <a  href="https://twitter.com/intent/tweet?text= #codebreak Hey all🙌 I played this amazing game 'Code Break'. Check it out you might like it! " class="twitter-share-button share-button" data-lang="en" data-show-count="false"></a>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div> -->
+                </div> 
+                
                 <div class="header">
                     <p>Here are the rules...</p>
                 </div>
                 <ul class="instructions">
                     <li>Every time to start the quest, a new code will be generated.</li>
-                    <li>For a code of length N, you will be given N-1 chances to break the code.</li>
-                    <li>For every guess you make you will be given hints in the form of ''T' & 'F'</li>
-                    <ul>
-                        <li>'T' if your guess for that position is correct</li>
-                        <li>'F' if your guess for that position is not correct</li>
+                    <li>For a code of length N, you will be given N chances to break the code.</li>
+                    <li>For every guess you make you will be given Color Coded hints.</li>
+                    <ul class="demo">
+                        <li><input class="game-input correct" style="margin-right:10px">    Correct Guess</li>
+                        <li><input class="game-input partially-correct" style="margin-right:10px">    Correct Number, Wrong Position</li>
+                        <li><input class="game-input incorrect" style="margin-right:10px">    Wrong Guess</li>
                     </ul>
-                    <li>As the levels progress, number of hints shall decrease.</li>
+                    <li>As the levels progress, difficulties might increase.</li>
                     <li><i>Are you ready to prove your worth?</i></li>
                 </ul>
-                <a class="start-button">PROCEED</a>
+                <a class="back-button button" href="index.html">BACK</a>
+                <a class="start-button button">PROCEED</a>
             </div>
 
             <div class="game-arena hide">
+
+                <div class="share-game">
+                    <a class="fab fa-whatsapp share-whatsapp" href="whatsapp://send?text=Hey! I played this amazing game 'Code Break'. Check it out you might like it! https://rinkumonani.github.io/codebreak/dist/index.html " data-action="share/whatsapp/share" target="_blank"> Whatsapp</a>    
+                    <a  href="https://twitter.com/intent/tweet?text= #codebreak Hey all🙌 I played this amazing game 'Code Break'. Check it out you might like it! " class="twitter-share-button share-button" data-lang="en" data-show-count="false"></a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
 
                 <div class="header">
                     <p>Welcome to Arena!</p>
                 </div>
                 <ul class="status-bar">
-                    <li class="game-num">Game: 1</li>
-                    <li class="score">Score: 0</li>
-                    <li class="level">Level: 1</li>
+                    <li class="game-chance">Tries: <span class="chance">0</span></li>
+                    <li class="game-score">Score: <span class="score">0</span></li>
+                    <li class="game-level">Level: <span class="level">1</span></li>
                 </ul>
 
                 <form class="gameForm">
                     <ul class="game-input-form-list">
                     </ul>
-                </form>                
+                </form>  
+
+                <ul class="game-input-form-list correct-ans">
+                </ul>
+
                 <ul class="instructions">
                     <!-- <li>Every time to start the quest, a new code will be generated.</li> -->
                 </ul>
-                <a class="submit-button hide">SUBMIT</a>
-                <a class="reset-button hide">RESET</a>
+                <a class="play-again-button button">PLAY AGAIN</a>
+                <a class="submit-button button">SUBMIT</a>
+                <a class="reset-button button">RESET</a>
+                
+                <a class="back-button button" href="arena.html">BACK</a>
             </div>
         </div>
+        
     </div>
 </body>
 </html>
